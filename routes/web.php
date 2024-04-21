@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+Route::get('/dashboard', [DashboardController::class, "doughnutChart"]);
+
+Route::get('/dashboard/cars', [CarController::class, "index"]);
+// Route::get('/cars', 'CarController@index')->name('cars.index');

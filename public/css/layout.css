@@ -6,7 +6,8 @@
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
 }
@@ -31,6 +32,13 @@ nav ul li {
     margin-top: 30px;
     cursor: pointer;
 }
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    color: rgb(165, 0, 0);
+}
 nav ul li img {
     height: 20px;
     margin-right: 15px;
@@ -38,4 +46,24 @@ nav ul li img {
 .maincontent {
     width: 80%;
     background-color: gainsboro;
+}
+
+/* header  */
+
+header {
+    width: 100%;
+    height: auto;
+}
+.headerSpacing {
+    width: 95%;
+    margin: 0px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerSpacing img {
+    height: 50px;
+    border-radius: 50%;
 }

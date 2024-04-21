@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="/css/dashboard.css">
     <title>Document</title>
     <link rel="stylesheet" href="/css/layout.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
     <main>
@@ -15,10 +17,10 @@
             </div>
             <ul>
                 <li>
-                    <img src="/photos/dashboardlogo.png" alt=""> Dashboard
+                <a href="/dashboard"><img src="/photos/dashboardlogo.png" alt=""> Dashboard</a>
                 </li>
                 <li>
-                    <img src="/photos/carslogo.png" alt=""> Cars
+                    <a href="/dashboard/cars"><img src="/photos/carslogo.png" alt=""> Cars</a>
                 </li>
                 <li>
                     <img src="/photos/customerslogo.png" alt=""> Customers
@@ -32,8 +34,31 @@
             </ul>
         </nav>
         <div class='maincontent'>
+            <header>
+                <div class="headerSpacing">
+                    <h3>@yield("pageName")</h3>
+                    <img src="/photos/adminImage.jpg" alt="">
+                </div>
+            </header>
             @yield("main")
         </div>
     </main>
+    <!-- JavaScript for handling AJAX navigation -->
+<script>
+    $(document).ready(function() {
+        // Intercept clicks on anchor links with 'ajax-link' class
+        $('a.ajax-link').on('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior (page reload)
+
+            var url = $(this).attr('href'); // Get the URL from the anchor's href attribute
+
+            // Use AJAX to fetch content from the URL
+            $.get(url, function(data) {
+                // Update the content area with the fetched data
+                $('#content').html(data);
+            });
+        });
+    });
+</script>
 </body>
 </html>

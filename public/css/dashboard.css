@@ -1,21 +1,3 @@
-header {
-    width: 100%;
-    height: auto;
-}
-.headerSpacing {
-    width: 95%;
-    margin: 0px auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.headerSpacing img {
-    height: 50px;
-    border-radius: 50%;
-}
-
 /* quick view statistcs   */
 .quickViewStatistics {
     width: 95%;
@@ -51,9 +33,10 @@ header {
     flex-wrap: wrap;
 }
 .status-container {
-    height: 400px;
+    height: auto;
     width: 48%;
     background-color: white;
     min-width: 100px;
     position: relative;
+    border-radius: 20px;
 }
