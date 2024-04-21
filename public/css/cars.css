@@ -1,0 +1,25 @@
+.carsArea {
+    width: 90%;
+    margin: 30px auto;
+    background-color: white;
+}
+.carsArea .filters {
+    padding: 20px;
+}
+.filters button {
+    padding: 10px 20px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.carsArea table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.carsArea table thead {
+    color: rgb(220, 0, 0);
+}
+.carsArea table th {
+    padding: 10px;
+}
