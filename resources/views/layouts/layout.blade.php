@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/cars.css">
+    <link rel="stylesheet" href="/css/addnewcar.css">
+    <link rel="stylesheet" href="/css/cardetails.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
 </head>

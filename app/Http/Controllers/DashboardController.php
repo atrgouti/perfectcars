@@ -9,8 +9,8 @@ class DashboardController extends Controller
     public function doughnutChart()
     {
         // Replace this with your actual data retrieval logic
-        $data = [            'labels' => ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'],
-            'data' => [25, 30, 15, 10, 20],
+        $data = [            'labels' => ["On rent", "Under repair", "Avaliable"],
+            'data' => [10, 3, 17],
         ];
         return view('dashboard', compact('data'));
     }

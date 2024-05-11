@@ -18,4 +18,10 @@ use App\Http\Controllers\CarController;
 Route::get('/dashboard', [DashboardController::class, "doughnutChart"]);
 
 Route::get('/dashboard/cars', [CarController::class, "index"]);
-// Route::get('/cars', 'CarController@index')->name('cars.index');
+Route::get('/dashboard/cars/addnewcar', [CarController::class, "create"]);
+Route::post('/dashboard/cars/addnewcar', [CarController::class, "store"]);
+Route::get('/dashboard/cars/{id}', [CarController::class, "show"]);
+Route::get('/dashboard/{id}/update', [CarController::class, "edit"]);
+Route::patch('/dashboard/{id}', [CarController::class, "update"]);
+
+Route::delete('/dashboard/cars/{id}', [CarController::class, "destroy"]);
